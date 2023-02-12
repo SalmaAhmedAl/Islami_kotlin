@@ -20,9 +20,15 @@ class SuraNameAdapter (val items:List<String>) :RecyclerView.Adapter<SuraNameAda
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_quran, parent, false)
         return ViewHolder(view)
     }
+    var onItemClick:OnItemClick ?=null
+    interface OnItemClick{
+        fun onSuraNameClick(sura: String , position:Int)
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
      holder.suraNameTV.text=items[position]
+        holder.itemView.setOnClickListener{ onItemClick?.onSuraNameClick(items.get(position), position)
+        }
     }
 
     override fun getItemCount(): Int = items.size

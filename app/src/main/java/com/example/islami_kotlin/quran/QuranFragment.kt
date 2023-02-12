@@ -1,11 +1,15 @@
 package com.example.islami_kotlin.quran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.islami_kotlin.Constants.FILE_NAME_EXTRA
+import com.example.islami_kotlin.Constants.SURA_NAME_EXTRA
 import com.example.islami_kotlin.databinding.FragmentQuranBinding
+import com.example.islami_kotlin.sura_details.SurahDetailsActiivity
 
 class QuranFragment : Fragment(){
     lateinit var viewBinding: FragmentQuranBinding
@@ -139,6 +143,18 @@ class QuranFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter = SuraNameAdapter(suraNames)
+        adapter.onItemClick = object :SuraNameAdapter.OnItemClick{
+            override fun onSuraNameClick(sura: String, position: Int) {
+                //We should start new activity ==> Sura details
+                val fileName = "${position+1}.txt"
+                val intent = Intent(requireActivity(), SurahDetailsActiivity::class.java)
+                intent.putExtra(SURA_NAME_EXTRA, sura)
+                intent.putExtra(FILE_NAME_EXTRA, fileName)
+                startActivity(intent)
+
+            }
+
+        }
         viewBinding.quraanRecycler.adapter=adapter
     }
 }

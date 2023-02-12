@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".sura_details.SurahDetailsActiivity">
+
+    <ImageView
+        android:id="@+id/arrow_back_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sura_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/arrow_back_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/arrow_back_icon"
+        tools:text="الفاتحة" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sura_name_title"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/sura_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="22sp"
+            android:padding="18dp"
+            android:layout_margin="12dp"
+            android:scrollbars="vertical"
+            />
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
