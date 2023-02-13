@@ -11,6 +11,8 @@
         android:adjustViewBounds="true"
         android:layout_margin="5dp"
         android:src="@drawable/hadeth_header"
+        android:fontFamily="@font/elmessiri"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".25"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:fontFamily="@font/elmessiri"
+
         android:text="الأحاديث"
         android:textColor="@color/black"
         android:textSize="22sp"

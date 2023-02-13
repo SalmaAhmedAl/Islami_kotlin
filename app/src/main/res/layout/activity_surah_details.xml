@@ -26,6 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/elmessiri"
+
         app:layout_constraintTop_toTopOf="@id/arrow_back_icon"
         tools:text="الفاتحة" />
     <ScrollView
@@ -38,6 +40,7 @@
             android:id="@+id/sura_content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:fontFamily="@font/elmessiri"
             android:textSize="22sp"
             android:padding="18dp"
             android:layout_margin="12dp"

@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:text="@string/radio_tv"
         android:textSize="26sp"
+        android:fontFamily="@font/elmessiri"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radio_header"

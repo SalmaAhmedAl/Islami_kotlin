@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Islami_kotlin</string>
-    <string name="islami">Islami</string>
-    <string name="hdeth">Hdeth</string>
-    <string name="quran">Quran</string>
-    <string name="radio">Radio</string>
-    <string name="tasbeh">Tasbeh</string>
+    <string name="islami">إسلامي</string>
+    <string name="hdeth">حديث</string>
+    <string name="quran">قرآن</string>
+    <string name="radio">راديو</string>
+    <string name="tasbeh">تسبيح</string>
     <string name="radio_tv">إذاعة القرآن الكريم</string>
+    <string name="count_tasbeh">عدد التسبيحات</string>
+    <string name="phase">سبحان الله</string>
 </resources>

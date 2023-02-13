@@ -23,6 +23,8 @@ class HadethContentActivity : AppCompatActivity() {
         viewBinding.hadethContent.text= hadethContent
 
         initListeners()
+        //to scroll over sura content
+        viewBinding.hadethContent.movementMethod=ScrollingMovementMethod()
     }
 
     fun initListeners(){
